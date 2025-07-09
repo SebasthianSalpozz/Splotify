@@ -1,0 +1,268 @@
+/* Paleta de Colores de Spotify */
+:root {
+  --spotify-black: #121212;
+  --spotify-dark-gray: #191414;
+  --spotify-gray: #282828;
+  --spotify-light-gray: #B3B3B3;
+  --spotify-white: #FFFFFF;
+  --spotify-green: #1DB954;
+  --spotify-green-hover: #1ED760;
+}
+
+/* Estilo Base del Body */
+body {
+  background-color: var(--spotify-black);
+  color: var(--spotify-white);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--spotify-white);
+}
+
+/* Contenedor Principal para Páginas */
+.spotify-container {
+  background-color: var(--spotify-black);
+  min-height: 100vh;
+  padding-bottom: 100px; /* Espacio para el reproductor */
+}
+
+/* --- Componentes de Bootstrap Personalizados --- */
+
+/* Botones Principales (Verde Spotify) */
+.btn-spotify {
+  background-color: var(--spotify-green);
+  border-color: var(--spotify-green);
+  color: var(--spotify-white);
+  font-weight: bold;
+  border-radius: 500px; /* Botones redondeados */
+  padding: 10px 30px;
+  transition: background-color 0.2s;
+}
+
+.btn-spotify:hover {
+  background-color: var(--spotify-green-hover);
+  border-color: var(--spotify-green-hover);
+  color: var(--spotify-white);
+}
+
+/* Botones Secundarios (Outline) */
+.btn-spotify-outline {
+  border: 2px solid var(--spotify-light-gray);
+  color: var(--spotify-white);
+  font-weight: bold;
+  border-radius: 500px;
+  padding: 8px 30px;
+  transition: all 0.2s;
+}
+
+.btn-spotify-outline:hover {
+  border-color: var(--spotify-white);
+  transform: scale(1.05);
+}
+
+
+/* Formularios */
+.form-label {
+    color: var(--spotify-white);
+    font-weight: 500;
+}
+
+.form-control, .form-select {
+  background-color: var(--spotify-gray);
+  color: var(--spotify-white);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: var(--spotify-gray);
+  color: var(--spotify-white);
+  border-color: var(--spotify-light-gray);
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: var(--spotify-light-gray);
+}
+
+/* Alertas de Error */
+.alert-danger {
+    background-color: #e53e3e;
+    color: var(--spotify-white);
+    border: none;
+}
+
+/* Barra de Navegación */
+.navbar-spotify {
+  background-color: #000000;
+  padding: 1rem 2rem;
+}
+
+.navbar-spotify .navbar-brand {
+  font-weight: bold;
+  color: var(--spotify-white);
+}
+
+.navbar-spotify .nav-link {
+  color: var(--spotify-light-gray);
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar-spotify .nav-link:hover, .navbar-spotify .nav-link.active {
+  color: var(--spotify-white);
+}
+
+/* --- Estilos de Componentes Personalizados --- */
+
+/* Tarjetas (Género y Artista) */
+.spotify-card {
+  background-color: #181818;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.spotify-card:hover {
+  background-color: var(--spotify-gray);
+}
+
+.spotify-card .card-img, .spotify-card .card-img-top {
+  border-radius: 8px; /* Bordes redondeados para imágenes cuadradas */
+  object-fit: cover;
+}
+
+.spotify-card.artist-card .card-img {
+    border-radius: 50%; /* Imágenes circulares para artistas */
+}
+
+.spotify-card .card-title {
+  font-weight: bold;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-card .card-text {
+    color: var(--spotify-light-gray);
+}
+
+
+/* Lista de Canciones */
+.song-list-item {
+  background-color: transparent !important;
+  color: var(--spotify-light-gray) !important;
+  border: none !important;
+  padding: 10px 15px !important;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.song-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.song-list-item.active {
+  color: var(--spotify-green) !important;
+  font-weight: bold;
+}
+
+/* Reproductor de Música */
+.player {
+  background-color: #181818;
+  border-top: 1px solid var(--spotify-gray);
+}
+
+/* --- Estilos para el Panel de Administración --- */
+
+/* Pestañas (Tabs) */
+.nav-tabs {
+  border-bottom: 1px solid var(--spotify-gray);
+}
+
+.nav-tabs .nav-link {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--spotify-light-gray);
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: transparent;
+  color: var(--spotify-white);
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--spotify-gray);
+  border-color: var(--spotify-gray);
+  color: var(--spotify-white);
+}
+
+
+/* Lista de ítems existentes en Admin */
+.admin-list {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-list li {
+  background-color: var(--spotify-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-list img {
+  border-radius: 4px;
+  margin-left: 1rem;
+}
+
+.admin-list audio {
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.admin-list .btn-link {
+    color: var(--spotify-light-gray);
+    text-decoration: none;
+    font-weight: bold;
+}
+.admin-list .btn-link:hover {
+    color: var(--spotify-white);
+}
+
+/* --- Estilos para el Player --- */
+
+.player-info {
+  display: flex;
+  align-items: center;
+}
+
+.player-info img {
+  width: 56px;
+  height: 56px;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.player-info h5 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.player-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--spotify-light-gray);
+}
